@@ -1,7 +1,7 @@
 
 using Printf
 
-problemName = "uniaxialExtension"
+problemName = "uniaxialExtension_paper"
 
 generateBoolean   = true ;
 
@@ -12,9 +12,10 @@ outDir = "./output" ;
 ladoSecc = 0.05
 largo    = 1
 
-boxGrid  = [ 0.1           0.9  ;
-             ladoSecc*.1   ladoSecc*.5 ;
-             ladoSecc*.1   ladoSecc*.5 ]
+#boxGrid  = [ [ 0.1 ,          0.9 ], [ ladoSecc*.1,   ladoSecc*.5], [ ladoSecc*.1,   ladoSecc*.5 ] ]
+
+boxGrid  = [ 0.1           0.9  ; ladoSecc*.1   ladoSecc*.5 ;  ladoSecc*.1   ladoSecc*.5 ] ;
+
 
 # con este roi se asegura que solo el eje central de voxels queda en dentro
 minsROI = [ 0.4,  ladoSecc*0.25,  ladoSecc*0.25 ]
@@ -103,4 +104,4 @@ paramFID     = open( paramsTexFile, "w" ) ;
 close( paramFID )
 
 # run MatIPS
-include("/home/jor/work/udelar/codigos/MatIPS_repo/src/MatIPS.jl")
+include("/home/jor/work/udelar/codigos/MatIPS_repo/src/julia/MatIPS.jl")
