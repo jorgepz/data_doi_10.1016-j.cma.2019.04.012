@@ -17,3 +17,5 @@ The pattern used for the filenames of intensity is:
 \_errorlevel\_
 
 chapa_intensities_nIm_1_Dp_0.2_errorlevel_0_pixels_256_Int_k_1
+
+Examples 1 to 3 published. Contact [jorgepz](https://www.fing.edu.uy/~jorgepz/) for other data.
